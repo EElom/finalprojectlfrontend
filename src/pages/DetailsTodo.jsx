@@ -27,7 +27,7 @@ const DetailsTodo = () => {
     const handleDelete = async () => {
         const { data } = await service.delete(`/todos/${_id}`)
         setFeedback (data.message)
-        setTimeout(() => navigate('/todo'),1000)
+        setTimeout(() => navigate('/dashboard'),1000)
 
     }
 
