@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
                 Authorization: `Bearer ${token}`,
             }
         })
-        navigate ("/todos")
+        navigate ("/dashboard")
 
     } catch (error) {
         console.log(error)
@@ -68,11 +68,12 @@ return (
                     type="text"
                     id ="status"
                     name="status"
-                    value ={status}
+                    value={-1}  
+                                
                     onChange={(e) => setStatus(e.target.value)}>
-                        
+                    <option disabled value={-1}>Pick The status</option>
                         {statusOptions.map((option) => (
-                            <option   
+                            <option
                                 key = {option}  
                                 value = {option}>
                                 {option}
